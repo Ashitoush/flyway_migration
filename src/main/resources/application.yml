@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/flyway_master_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  flyway:
+    enabled: false
+    locations:
+      - /db/migration
+      - /db/schema
+      - /db/seeder
+    baseline-on-migrate: true
+#    validate-migration-naming: true
+#    validate-on-migrate: true
+#    url:
